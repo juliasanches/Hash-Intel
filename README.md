@@ -69,19 +69,12 @@ Todas os endpoints exigem o header `X-API-Key: <valor-do-APP_API_KEY>`.
 
 `/root` - [GET] - Status da API
 
-![alt text](image.png)
-
 `/hash/scan` - [POST] - Escaneia um hash nas três plataformas e executa a análise com o LLM.
-
-![alt text](image-2.png)
 
 `/history/`- [GET] - Lista histórico de consultas. Por padrão, recorre as 20 últimas. Conteúdo resumido.
 
-![alt text](image-3.png)
-
 `/history/{id}` - [GET] - Detalha o registro em específico por completo.
 
-![alt text](image-4.png)
 
 
 
