@@ -61,8 +61,6 @@ Acesse `http://localhost:8000/docs` para usar o Swagger UI.
 
 Antes da requisição, clique em **Authorize** e insira o valor da `APP_API_KEY`, conforme tenha escolhido para se autenticar.
 
-![alt text](image-1.png)
-
 Todas os endpoints exigem o header `X-API-Key: <valor-do-APP_API_KEY>`. 
 
 ## Endpoints
@@ -74,6 +72,24 @@ Todas os endpoints exigem o header `X-API-Key: <valor-do-APP_API_KEY>`.
 `/history/`- [GET] - Lista histórico de consultas. Por padrão, recorre as 20 últimas. Conteúdo resumido.
 
 `/history/{id}` - [GET] - Detalha o registro em específico por completo.
+
+## Docker
+
+Se desejar, pode executar através do Docker disponibilizado.
+
+**Build da imagem**
+```bash 
+docker build -t jsb-cti-api .
+```
+
+**Rode o container**
+
+```bash
+docker run -p 8000:8000 --env-file .env jsb-cti-api
+``` 
+
+O arquivo .env não é incluído na imagem, sendo usadas em runtime. Lembre-se de alterar com suas próprias keys.
+
 
 
 
